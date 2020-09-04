@@ -15,10 +15,11 @@
 #  directory will be removed in the future.
 #
 
-version: '2'
+version: '2.1'  # changed from 2 to 2.1
 services:
   anchore-engine:
-    image: docker.io/anchore/anchore-engine:v0.3.4
+    image: anchore/anchore-engine:v0.8.1   # updated to latest anchore version
+    depends_on:
     #privileged: true
     depends_on:
      - anchore-db
